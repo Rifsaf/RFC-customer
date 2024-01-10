@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/src/assets/images/Logo icon.png" type="images/x-icon">
+
+    <!--css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pincode-input@0.1.0/dist/pincode-input.min.css"/>
+    <link rel="stylesheet" href="/dist/style.css">
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+
+</head>
+<body>
+<!-- Modal login -->
+<div
+  class="modal fade"
+  id="login"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img
+          data-bs-dismiss="modal"
+          class="close-modal"
+          src="/src/assets/svg/close-modal.svg"
+          alt=""
+        />
+
+        <h3 class="text-center">Login</h3>
+      </div>
+      <div class="modal-body pb-0">
+        <div class="authentication">
+          <div class="input-group w-100">
+            <div class="item w-100">
+              <label for="">E-mail / No. Telpon</label>
+              <input
+                class="border-grey w-100"
+                type="text"
+                placeholder="Masukkan e-mail / no. telpon"
+              />
+            </div>
+
+            <div class="item w-100">
+              <label for="">Kata Sandi</label>
+              <div class="with-icon password-input-group">
+                <img
+                  class="icon-suffix"
+                  src="/src/assets/svg/eye.svg"
+                  alt=""
+                />
+                <input
+                  class="border-grey w-100"
+                  type="password"
+                  placeholder="Masukkan kata sandi"
+                />
+              </div>
+            </div>
+
+            <div class="item last-item" data-bs-toggle="modal" data-bs-target="#sendOtp">
+              <button class="button-custom link">
+                Lupa kata sandi?
+              </button>
+            </div>
+          </div>
+
+          <div class="bottom">
+            <a href="/src/html/beranda.html"><button class="w-100 button-custom" >Login</button></a>
+            
+
+            <div class="divider">
+              <hr />
+              <p>atau masuk dengan</p>
+            </div>
+
+            <button
+              class="button-custom light w-100"
+              style="gap: 19px; height: 64px"
+            >
+              <img
+                src="/src/assets/svg/flat-color-icons_google.svg"
+                alt=""
+              />
+              <h3>Google</h3>
+            </button>
+            
+            <div class="d-flex justify-content-center" >
+              <p>Belum punya akun?  </p>
+              <button class="button-custom link" class="button-custom" data-bs-toggle="modal" data-bs-target="#register">
+                Register
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Register -->
+<div
+  class="modal fade"
+  id="register"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img
+          data-bs-dismiss="modal"
+          class="close-modal"
+          src="/src/assets/svg/close-modal.svg"
+          alt=""
+        />
+
+        <h3 class="text-center">Register</h3>
+      </div>
+      <div class="modal-body pb-0">
+        <div class="authentication">
+          <div class="input-group w-100">
+            <div class="item w-100">
+              <label for="">Nama Lengkap</label>
+              <input
+                class="border-grey w-100"
+                type="text"
+                placeholder="Masukkan nama lengkap"
+              />
+            </div>
+
+            <div class="item w-100">
+              <label for="">E-mail</label>
+              <input
+                class="border-grey w-100"
+                type="email"
+                placeholder="Masukkan e-mail"
+              />
+            </div>
+
+            <div class="item w-100">
+              <label for="">No. Telpon</label>
+              <input
+                class="border-grey w-100"
+                type="number"
+                placeholder="Masukkan no. telpon"
+              />
+            </div>
+
+            <div class="item w-100">
+              <label for="">Kata Sandi</label>
+              <div class="with-icon password-input-group">
+                <img
+                  class="icon-suffix"
+                  src="/src/assets/svg/eye.svg"
+                  alt=""
+                />
+                <input
+                  class="border-grey w-100"
+                  type="password"
+                  placeholder="Masukkan kata sandi"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom">
+            <a href="/src/html/beranda.html"><button class="w-100 button-custom" >Register</button></a>
+            <div class="divider">
+              <hr />
+              <p>atau masuk dengan</p>
+            </div>
+
+            <button
+              class="button-custom light w-100"
+              style="gap: 19px; height: 64px"
+            >
+              <img
+                src="/src/assets/svg/flat-color-icons_google.svg"
+                alt=""
+              />
+              <h3>Google</h3>
+            </button>
+
+            <div class="d-flex justify-content-center" >
+              <p>Sudah punya akun?  </p>
+              <button class="button-custom link" class="button-custom" data-bs-toggle="modal" data-bs-target="#login">
+                Log in
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal kirim otp -->
+<div
+  class="modal fade"
+  id="sendOtp"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img
+          data-bs-dismiss="modal"
+          class="close-modal"
+          src="/src/assets/svg/close-modal.svg"
+          alt=""
+        />
+
+        <h3 class="text-center">Kirim OTP</h3>
+      </div>
+      <div class="modal-body">
+        <div class="authentication">
+          <div class="input-group w-100">
+            <div class="item w-100">
+              <label for="">E-mail / no. telpon terdaftar</label>
+              <input
+                class="border-grey w-100"
+                type="text"
+                placeholder="Masukkan e-mail / no. telpon terdaftar"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="w-100 button-custom" data-bs-toggle="modal" data-bs-target="#otp">Kirim OTP</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal otp -->
+<div
+  class="modal fade"
+  id="otp"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img
+          data-bs-dismiss="modal"
+          class="close-modal"
+          src="/src/assets/svg/close-modal.svg"
+          alt=""
+        />
+
+        <h3 class="text-center">Masukkan OTP</h3>
+      </div>
+      <div class="modal-body pb-0">
+        <div class="authentication">
+          <div class="pin-modal-wrapper">
+            <div class="w-100">
+              <p class="text-center w-100">
+                Kode verifikasi telah dikirim melalui
+              </p>
+              <p class="text-center w-100">WhatsApp +628039849405</p>
+            </div>
+            <div class="input-pin"></div>
+            <h3 class="lato fw-400 w-100 text-center" data-bs-toggle="modal" data-bs-target="#changePassword">01:32</h3>
+            <div class="d-flex justify-content-center">
+              <p>Tidak menerima OTP?</p>
+              <a href="">
+                <p class="fw-600 ms-2 light-green">Kirim Ulang</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal change passowrd -->
+<div
+  class="modal fade"
+  id="changePassword"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img
+          data-bs-dismiss="modal"
+          class="close-modal"
+          src="/src/assets/svg/close-modal.svg"
+          alt=""
+        />
+
+        <h3 class="text-center">Ubah Kata Sandi</h3>
+      </div>
+      <div class="modal-body">
+        <div class="authentication">
+          <div class="input-group w-100">
+            <div class="item w-100">
+              <label for="">Kata Sandi Baru</label>
+              <div class="with-icon password-input-group">
+                <img
+                  class="icon-suffix"
+                  src="/src/assets/svg/eye.svg"
+                  alt=""
+                />
+                <input
+                  class="border-grey w-100"
+                  type="password"
+                  placeholder="Masukkan kata sandi"
+                />
+              </div>
+            </div>
+
+            <div class="item w-100">
+              <label for="">Konfirmasi Kata Sandi Baru</label>
+              <div class="with-icon password-input-group">
+                <img
+                  class="icon-suffix"
+                  src="/src/assets/svg/eye.svg"
+                  alt=""
+                />
+                <input
+                  class="border-grey w-100"
+                  type="password"
+                  placeholder="Masukkan kata sandi"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="w-100 button-custom">Ubah</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <nav class="navbar-custom">
+    <div class="wrapper">
+        <img src="/src/assets/svg/navbar-brand.svg" alt="" />
+
+        <div class="center">
+          <a href="/src/html/preauth/preauth-beranda.html" class="active">Beranda</a>
+          <a href="/src/html/preauth/preauth-produk-reguler.html">Produk</a>
+          <a href="/src/html/preauth/preauth-produk-lelang.html">Lelang</a>
+          <a href="/src/html/preauth/preauth-bantuan.html" >Bantuan</a>
+      </div>
+
+        <div class="action">
+            <button class="button-custom light" data-bs-toggle="modal" data-bs-target="#login">Login</button>
+            <button class="button-custom" data-bs-toggle="modal" data-bs-target="#register">Register</button>
+        </div>
+    </div>
+  </nav>
+
+
+    <main>
+        <!--Hero Section-->
+        <section id="hero">
+            <div class="container">
+                <h1 class="bg-transparent" style="color: #FBFBFB;"> Di Atap, Harapan Baru Tumbuh!</h1>
+                <a class="page-link" href="#"><button class="primary-button">Beli sekarang</button></a>
+            </div>
+        </section>
+        
+        <!--About Section-->
+        <section id="about" class="konten">
+            <div class="container">
+                <div class="about-inner">
+                    <div class="tittle">
+                        <h4>Tentang Kami</h4>
+                        <h1>Apa itu Rooftop Farming Center?</h1>
+                    </div>
+                    <div class="wrapper">
+                        <div class="video-profile">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qouum08VpmA?si=6UvIXI76QyE7UabQ&amp;controls=0autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div>
+                            <p>Rooftop Farming Center (RFC)  merupakan pusat pertanian milik Institut Teknologi Telkom Surabaya yang berbasis Internet of Things (IoT). Kami percaya bahwa dengan menggabungkan inovasi pertanian perkotaan dan teknologi IoT, kami dapat mengatasi tantangan pangan dan lingkungan yang dihadapi oleh kota-kota modern. Dengan teknologi IoT yang terintegrasi kami dapat secara otomatis memantau dan mengontrol aspek penting seperti irigasi, nutrisi, suhu, dan pencahayaan tanaman sehingga memungkinkan untuk menciptakan kondisi pertumbuhan yang optimal, meningkatkan produktivitas, dan mengurangi penggunaan sumber daya secara efisien. Komitmen kami tidak hanya terbatas pada pertanian berkelanjutan, tetapi juga pada edukasi dan pelatihan masyarakat tentang manfaat pertanian perkotaan dan teknologi IoT.</p>
+                        </div>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Product Section-->
+        <section id="product" class="konten">
+            <div class="container">
+                <div class="about-inner">
+                    <div class="tittle">
+                        <h4>Produk</h4>
+                        <h1 style="align-self: center;">Dapatkan berbagai produk hasil budidaya ikan buah dan sayuran segar disini!</h1>
+                    </div>
+                    <div  class="list-product">
+                        <a href="/detail.produk.tersedia.html">
+                            <div id="card-produk" style="width: 18rem;">
+                                <div class="card" >
+                                <img src="/src/assets/images/product-1.png" class="card-img-top" alt="...">
+                                <div class="card-text">
+                                        <div class="card-body">
+                                        <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                                        <h5 >Rp68.000 - Rp92.000</h5>
+                                        </div>    
+                                        <div class="wrapper" style="padding: 20px 10px;">
+                                            <img src="/src/assets/svg/star-sm.svg" alt="">4.5
+                                            <p>124 Terjual</p>
+                                        </div>                           
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+    
+                        <a href="/detail.produk.tersedia.html">
+                            <div id="card-produk" style="width: 18rem;">
+                                <div class="card" >
+                                <img src="/src/assets/images/product-2.png" class="card-img-top" alt="...">
+                                <div class="card-text">
+                                        <div class="card-body">
+                                        <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                                        <h5 >Rp68.000 - Rp92.000</h5>
+                                        </div>    
+                                        <div class="wrapper" style="padding: 20px 10px;">
+                                            <img src="/src/assets/svg/star-sm.svg" alt="">4.5
+                                            <p>124 Terjual</p>
+                                        </div>                           
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="/detail.produk.tersedia.html">
+                            <div id="card-produk" style="width: 18rem;">
+                                <div class="card" >
+                                <img src="/src/assets/images/product-5.png" class="card-img-top" alt="...">
+                                <div class="card-text">
+                                        <div class="card-body">
+                                        <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                                        <h5 >Rp68.000 - Rp92.000</h5>
+                                        </div>    
+                                        <div class="wrapper" style="padding: 20px 10px;">
+                                            <img src="/src/assets/svg/star-sm.svg" alt="">4.5
+                                            <p>124 Terjual</p>
+                                        </div>                           
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <button class="secondary-button">Selengkapnya</button>
+                    </div>
+                </div>
+                </div>
+                
+        </section>
+
+        <!--Testimoni Section-->
+        <section id="testimoni" class="konten">
+            <div class="container">
+                <div class="tittle">
+                    <h4>Testimoni</h4>
+                    <h1>Dengarkan apa kata mereka!</h1>
+                </div>
+                <div class="wrapper">
+                    <div class="video-profile">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qouum08VpmA?si=6UvIXI76QyE7UabQ&amp;controls=0autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <p>Rooftop Farming Center (RFC)  merupakan pusat pertanian milik Institut Teknologi Telkom Surabaya yang berbasis Internet of Things (IoT). Kami percaya bahwa dengan menggabungkan inovasi pertanian perkotaan dan teknologi IoT, kami dapat mengatasi tantangan pangan dan lingkungan yang dihadapi oleh kota-kota modern. Dengan teknologi IoT yang terintegrasi kami dapat secara otomatis memantau dan mengontrol aspek penting seperti irigasi, nutrisi, suhu, dan pencahayaan tanaman sehingga memungkinkan untuk menciptakan kondisi pertumbuhan yang optimal, meningkatkan produktivitas, dan mengurangi penggunaan sumber daya secara efisien. Komitmen kami tidak hanya terbatas pada pertanian berkelanjutan, tetapi juga pada edukasi dan pelatihan masyarakat tentang manfaat pertanian perkotaan dan teknologi IoT.</p>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </section>
+      <!--FOOTER-->
+      <footer class="footer">
+        <div class="top">
+          <div class="item">
+            <a href="/src/html/beranda.html">
+              <h3 class="fw-400">Beranda</h3>
+            </a>
+            <a href="/src/html/produk-reguler.html">
+              <h3 class="fw-400">Produk</h3>
+            </a>
+            <a href="/src/html/produk-lelang.html">
+              <h3 class="fw-400">Lelang</h3>
+            </a>
+            <a href="/src/html/bantuan.html">
+              <h3 class="fw-400">Bantuan</h3>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="https://youtu.be/Lk870ZBfTQk?si=ppSMDgsuJy2iLTx-">
+              <img src="/src/assets/svg/ant-design_youtube-outlined.svg" alt=""/>
+              <h3 class="fw-400">ITTelkom Surabaya</h3>
+            </a>
+            <a href="https://www.instagram.com/rfc.ittelkomsby/?hl=en">
+              <img src="/src/assets/svg/fe_instagram.svg" alt="" />
+              <h3 class="fw-400">rfc.ittelkomsby</h3>
+            </a>
+            <a href="https://wa.me/6282312206635">
+              <img src="/src/assets/svg/ri_whatsapp-line.svg" alt="" />
+              <h3 class="fw-400">Admin RFC</h3>
+            </a>
+            <a href="https://maps.app.goo.gl/bdZyWKLKxjD6meKY8">
+              <img src="/src/assets/svg/pajamas_location.svg" alt="" />
+              <h3 class="fw-400">Jl. Ketintang no.156 Surabaya, 60231 Jawa Timur, Indonesia</h3>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="">
+              <img src="/src/assets/svg/RFC_logo_1-removebg-preview-1.svg" alt=""/>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/RFC_logo_1-removebg-preview-2.svg" alt=""/>
+            </a>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <h3>© 2023 Rooftop Farming Center. All rights reserved.</h3>
+        </div>
+      </footer>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!--input kode OTP-->   
+    <script src="https://cdn.jsdelivr.net/npm/pincode-input@0.1.0/dist/pincode-input.min.js"></script>
+    <script>
+      new PincodeInput(".input-pin", {
+        count: 4,
+        secure: true,
+        previewDuration: 200,
+        onInput: (value) => {
+          console.log(value);
+        },
+      });
+    </script>
+</body>
+</html>

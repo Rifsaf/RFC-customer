@@ -1,0 +1,16 @@
+{
+  "name": "fe-customer-rfc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile-scss": "node-sass src/scss/style.scss dist/style.css --output-style",
+    "watch-scss": "npm run compile-scss -- --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

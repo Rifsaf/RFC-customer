@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/dist/style.css" />
+    <title>Detail Lelang Sedang Berlangsung</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Modal notification -->
+  <div class="modal fade" id="modalNotification" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img data-bs-dismiss="modal" class="close-modal" src="/src/assets/svg/close-modal.svg" alt=""/>
+          <h3 class="text-center">Notifikasi</h3>
+        </div>
+        <div class="modal-body pb-0">
+          <div class="notification-wrapper">
+            <div class="item">
+              <div class="left">
+                <p class="fw-600 mb-1">
+                  Anda memenangkan lelang Melon Golden Langkawi!
+                </p>
+                <p>Segera konfirmasi sebelum 23.59 WIB</p>
+              </div>
+              <p>08.00</p>
+            </div>
+            <div class="item">
+              <div class="left">
+                <p class="fw-600">
+                  Anda memenangkan lelang Melon Golden Langkawi!
+                </p>
+                <p>Segera konfirmasi sebelum 23.59 WIB</p>
+              </div>
+              <p>08.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <main>
+      <nav class="navbar-custom">
+        <div class="wrapper">
+          <img src="/src/assets/svg/navbar-brand.svg" alt="" />
+    
+          <div class="center">
+            <a href="../beranda.html">Beranda</a>
+            <a href="../produk-reguler.html" class="active">Produk</a>
+            <a href="../produk-lelang.html">Lelang</a>
+            <a href="../bantuan.html">Bantuan</a>
+          </div>
+    
+          <div class="right">
+            <a href="../cart.html">
+              <div>
+                <img src="/src/assets/svg/cart3.svg" alt="" />
+              </div>
+            </a>
+    
+            <div class="notif-count" data-bs-toggle="modal" data-bs-target="#modalNotification">
+              <img src="/src/assets/svg/bell.svg" alt="" />
+              <div>2</div>
+            </div>
+    
+            <a href="/src/html/profil/profil.html">
+              <img src="/src/assets/svg/avatar.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-custom">
+        <div class="product-pages auction-detail-pages">
+          <div class="breadcump">
+            <img
+              onclick="history.back()"
+              src="/src/assets/svg/Chevron.svg"
+              alt=""
+            />
+            <h1><b>Lelang /</b> Detail</h1>
+          </div>
+
+          <div class="product-wrapper">
+            <div class="row">
+              <div class="col-xl-7 p-0 col-12 product-detail">
+                <div class="top">
+                  <div class="left">
+                    <div class="swiper mySwiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            class="swiper-slide"
+                            src="/src/assets/images/product-1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            class="swiper-slide"
+                            src="/src/assets/images/product-1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            class="swiper-slide"
+                            src="/src/assets/images/product-1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img
+                            class="swiper-slide"
+                            src="/src/assets/images/product-1.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+
+                  <div class="right">
+                    <h1>Melon Golden Langkawi Super Big Size 5 Kg</h1>
+
+                    <h2>Harga mulai Rp110.000</h2>
+
+                    <div class="row">
+                      <div class="col-6">
+                        <p class="grey">Mulai</p>
+                        <p>20 April 2023, 08.00 WIB</p>
+                      </div>
+                      <div class="col-6">
+                        <p class="grey">Berakhir</p>
+                        <p>20 April 2023, 16.00 WIB</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-6">
+                        <p class="grey">Umur Simpan</p>
+                        <p>2-3 Hari (Suhu Ruang)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bottom">
+                  <h1>Peraturan</h1>
+
+                  <div class="desc mt-1">
+                    <p>
+                      1. Peserta tidak dapat menawar dengan harga dibawah harga
+                      tertinggi
+                    </p>
+                    <p>
+                      2. Peserta pertama hanya bisa menawar diatas harga mulai
+                    </p>
+                    <p>
+                      3. Pemenang lelang wajib membeli produk dengan harga yang
+                      dimenangkan
+                    </p>
+                    <p>
+                      4. Pemenang lelang yang tidak membeli produk akan di non
+                      aktifkan dalam waktu 1 tahun
+                    </p>
+                    <p>
+                      5. Jika pemenang membatalkan tawaran, maka peserta
+                      diposisi kedua akan secara otomatis menjadi pemenang
+                    </p>
+                  </div>
+
+                  <h1 class="mt-4">Deskripsi</h1>
+
+                  <div class="desc mt-1">
+                    <p>
+                      Golden melon adalah buah yang memikat dengan warnanya yang
+                      cerah dan rasa lezatnya. Buah ini memiliki kulit berwarna
+                      kuning emas yang halus yang menyembunyikan dagingnya yang
+                      lezat, manis, dan segar.
+                    </p>
+
+                    <br />
+
+                    <p>
+                      Kulitnya terlihat berkilau dengan warna keemasan yang
+                      memancarkan aroma harum untuk menandakan kematangannya.
+                      Tekstur kulitnya yang halus dengan sedikit alur menambah
+                      daya tarik visualnya, memberi petunjuk akan rasa lezat
+                      yang tersembunyi di dalamnya. Saat dibelah, buah ini
+                      mengungkap daging berwarna kuning keemasan yang sangat
+                      juicy dengan perpaduan manis yang nikmat dan sentuhan
+                      aroma bunga yang lembut, menjadikannya kesegaran yang
+                      memanjakan lidah.
+                    </p>
+
+                    <br />
+
+                    <p>
+                      Daging golden melon kaya akan vitamin, terutama vitamin C
+                      dan A, serta mengandung nutrisi penting seperti kalium dan
+                      antioksidan. Buah yang lezat ini dapat dinikmati segar,
+                      dicampurkan ke dalam salad buah, atau dijadikan jus dan
+                      smoothie yang menyegarkan, memberikan cita rasa manis yang
+                      menyenangkan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-5 col-12 mt-4 mt-xl-0 offer-section">
+                <div class="wrapper">
+                  <div class="top-offer">
+                    <h1 class="fw-700">Penawaran Teratas</h1>
+                    <div class="wrapper">
+                      <div class="left">
+                        <p class="text-center">Rank</p>
+                        <div class="rank mt-1 text-center">1</div>
+                      </div>
+
+                      <div class="right">
+                        <h3 class="lato grey">13/10/2022, 13.41</h3>
+                        <h1 class="fw-700 mt-1">Rp180.000</h1>
+                      </div>
+                    </div>
+
+                    <h3 class="lato grey fw-700 text-center mt-2">
+                      38 kali ditawar
+                    </h3>
+                  </div>
+
+                  <div class="top-offer mt-4">
+                    <h1 class="fw-700">Penawaran Teratas Anda</h1>
+                    <div class="wrapper">
+                      <div class="left">
+                        <p class="text-center">Rank</p>
+                        <div class="rank mt-1 text-center">3</div>
+                      </div>
+
+                      <div class="right">
+                        <h3 class="lato grey">13/10/2022, 13.41</h3>
+                        <h1 class="fw-700 mt-1">Rp140.000</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-12 col-12">
+               <div class="table">
+                    <div class="title">
+                         <h5>Penawaran <span>(38 kali)</span></h5>
+                    </div>
+                    <table class="table table-striped">
+                         <thead>
+                           <tr>
+                             <th scope="col">Pelanggan</th>
+                             <th scope="col">Harga</th>
+                             <th scope="col">Rank</th>
+                           </tr>
+                         </thead>
+                         <tbody>
+                           <tr>
+                             <td>Risa Andini</td>
+                             <td>Rp.170.000</td>
+                             <td>1</td>
+                           </tr>
+                           <tr>
+                             <td>Jacob</td>
+                             <td>Rp.169.000</td>
+                             <td>2</td>
+                           </tr>
+                           <tr>
+                             <td>Larry</td>
+                             <td>Rp.165.000</td>
+                             <td>3</td>
+                           </tr>
+                           <tr>
+                              <td>Andini</td>
+                              <td>Rp.160.000</td>
+                              <td>4</td>
+                            </tr>
+                            <tr>
+                              <td>Jastin</td>
+                              <td>Rp.155.000</td>
+                              <td>5</td>
+                            </tr>
+                            <tr>
+                              <td>Larry lobster</td>
+                              <td>Rp.150.000</td>
+                              <td>6</td>
+                            </tr>
+                            <tr>
+                              <td>Dini</td>
+                              <td>Rp.140.000</td>
+                              <td>7</td>
+                            </tr>
+                            <tr>
+                              <td>Dano</td>
+                              <td>Rp.120.000</td>
+                              <td>8</td>
+                            </tr>
+                            <tr>
+                              <td>Larry ken</td>
+                              <td>Rp.90.000</td>
+                              <td>9</td>
+                            </tr>
+                            <tr>
+                              <td>ken</td>
+                              <td>Rp.70.000</td>
+                              <td>10</td>
+                            </tr>
+                         </tbody>
+                       </table>
+                       <div class="pagination">
+                         <div class="baris">
+                              baris per halaman: 10
+                         </div>
+                         <div class="baris-all">
+                              1-10 dari 100 item
+                              <div class="arrow">
+                                   
+                              </div>
+                         </div>
+                       </div>
+               </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="top">
+          <div class="item">
+            <a href="">
+              <h3 class="fw-400">Beranda</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Produk</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Lelang</h3>
+            </a>
+            <a href="">
+              <h3 class="fw-400">Bantuan</h3>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="">
+              <img
+                src="/src/assets/svg/ant-design_youtube-outlined.svg"
+                alt=""
+              />
+              <h3 class="fw-400">ITTelkom Surabaya</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/fe_instagram.svg" alt="" />
+              <h3 class="fw-400">rfc.ittelkomsby</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/ri_whatsapp-line.svg" alt="" />
+              <h3 class="fw-400">Admin RFC</h3>
+            </a>
+            <a href="">
+              <img src="/src/assets/svg/pajamas_location.svg" alt="" />
+              <h3 class="fw-400">
+                Jl. Ketintang no.156 Surabaya, 60231Jawa Timur, Indonesia
+              </h3>
+            </a>
+          </div>
+
+          <div class="item">
+            <a href="">
+              <img
+                src="/src/assets/svg/RFC_logo_1-removebg-preview-1.svg"
+                alt=""
+              />
+            </a>
+            <a href="">
+              <img
+                src="/src/assets/svg/RFC_logo_1-removebg-preview-2.svg"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <h3>© 2023 Rooftop Farming Center. All rights reserved.</h3>
+        </div>
+      </footer>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '"> </span>';
+          },
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>

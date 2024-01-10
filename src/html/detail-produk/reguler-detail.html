@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/dist/style.css" />
+  <title>Detail Produk</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+
+  <!-- Link Swiper's CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/pincode-input@0.1.0/dist/pincode-input.min.css"
+  />
+</head>
+<body>
+
+<!-- Modal notification -->
+<div class="modal fade" id="modalNotification" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img data-bs-dismiss="modal" class="close-modal" src="/src/assets/svg/close-modal.svg" alt=""/>
+        <h3 class="text-center">Notifikasi</h3>
+      </div>
+      <div class="modal-body pb-0">
+        <div class="notification-wrapper">
+          <div class="item">
+            <div class="left">
+              <p class="fw-600 mb-1">
+                Anda memenangkan lelang Melon Golden Langkawi!
+              </p>
+              <p>Segera konfirmasi sebelum 23.59 WIB</p>
+            </div>
+            <p>08.00</p>
+          </div>
+          <div class="item">
+            <div class="left">
+              <p class="fw-600">
+                Anda memenangkan lelang Melon Golden Langkawi!
+              </p>
+              <p>Segera konfirmasi sebelum 23.59 WIB</p>
+            </div>
+            <p>08.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <nav class="navbar-custom">
+    <div class="wrapper">
+      <img src="/src/assets/svg/navbar-brand.svg" alt="" />
+
+      <div class="center">
+        <a href="../beranda.html">Beranda</a>
+        <a href="../produk-reguler.html" class="active">Produk</a>
+        <a href="../produk-lelang.html">Lelang</a>
+        <a href="../bantuan.html">Bantuan</a>
+      </div>
+
+      <div class="right">
+        <a href="../cart.html">
+          <div>
+            <img src="/src/assets/svg/cart3.svg" alt="" />
+          </div>
+        </a>
+
+        <div class="notif-count" data-bs-toggle="modal" data-bs-target="#modalNotification">
+          <img src="/src/assets/svg/bell.svg" alt="" />
+          <div>2</div>
+        </div>
+
+        <a href="/src/html/profil/profil.html">
+          <img src="/src/assets/svg/avatar.svg" alt="" />
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-custom">
+    <div class="product-pages">
+      <div class="breadcump">
+        <img
+          onclick="history.back()"
+          src="/src/assets/svg/Chevron.svg"
+          alt=""
+        />
+        <h1><b>Produk /</b> Detail</h1>
+      </div>
+
+      <div class="product-wrapper">
+        <div class="row">
+          <div class="col-xl-7 col-12 product-detail">
+            <div class="top">
+              <div class="left">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        class="swiper-slide"
+                        src="/src/assets/images/product-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        class="swiper-slide"
+                        src="/src/assets/images/product-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        class="swiper-slide"
+                        src="/src/assets/images/product-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        class="swiper-slide"
+                        src="/src/assets/images/product-1.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+              <div class="right">
+                <h1>Melon Segar Big Size 2 Kg - 2,5 Kg</h1>
+
+                <div class="data-product">
+                  <p class="d-flex align-items-center">
+                    <img
+                      class="pe-2"
+                      src="/src/assets/svg/star.svg"
+                      alt=""
+                    />
+                    4.9
+                  </p>
+
+                  <p>124 <span class="grey">Terjual</span></p>
+                  <p>34 <span class="grey">Ulasan</span></p>
+                </div>
+
+                <h2>Rp86.000 - Rp92.000</h2>
+
+                <div class="variant">
+                  <div class="item variant-item active">
+                    <p class="fw-600">2 Kg</p>
+                  </div>
+                  <div class="item variant-item">
+                    <p class="fw-600">2, 16 Kg</p>
+                  </div>
+                  <div class="item variant-item">
+                    <p class="fw-600">2 ,36 Kg</p>
+                  </div>
+                  <div class="item variant-item">
+                    <p class="fw-600">2 ,4 Kg</p>
+                  </div>
+                  
+                  <button type="submit" disabled="disabled" class="item variant-item disable">
+                    <p class="fw-600">4,6 Kg</p>
+                  </button>
+            
+                  <button type="submit" disabled="disabled" class="item variant-item disable">
+                    <p class="fw-600">2,5 Kg</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bottom" style="align-items: flex-start;">
+              <div class="spec">
+                <h3>Spesifikasi</h3>
+
+                <div class="row mt-1">
+                  <div class="col-6">
+                    <p class="grey">Stok</p>
+                    <p>172</p>
+                  </div>
+
+                  <div class="col-6">
+                    <p class="grey">Umur Simpan</p>
+                    <p>2-3 Hari (Suhu Ruang)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="desc mt-4">
+                <p>
+                  Golden melon adalah buah yang memikat dengan warnanya yang
+                  cerah dan rasa lezatnya. Buah ini memiliki kulit berwarna
+                  kuning emas yang halus yang menyembunyikan dagingnya yang
+                  lezat, manis, dan segar.
+                </p>
+
+                <br />
+
+                <p>
+                  Kulitnya terlihat berkilau dengan warna keemasan yang
+                  memancarkan aroma harum untuk menandakan kematangannya.
+                  Tekstur kulitnya yang halus dengan sedikit alur menambah
+                  daya tarik visualnya, memberi petunjuk akan rasa lezat
+                  yang tersembunyi di dalamnya. Saat dibelah, buah ini
+                  mengungkap daging berwarna kuning keemasan yang sangat
+                  juicy dengan perpaduan manis yang nikmat dan sentuhan
+                  aroma bunga yang lembut, menjadikannya kesegaran yang
+                  memanjakan lidah.
+                </p>
+
+                <br />
+
+                <p>
+                  Daging golden melon kaya akan vitamin, terutama vitamin C
+                  dan A, serta mengandung nutrisi penting seperti kalium dan
+                  antioksidan. Buah yang lezat ini dapat dinikmati segar,
+                  dicampurkan ke dalam salad buah, atau dijadikan jus dan
+                  smoothie yang menyegarkan, memberikan cita rasa manis yang
+                  menyenangkan.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-5 col-12 buy-section">
+            <div class="wrapper">
+              <p>Varian dipilih : <span class="fw-600 ps-2">2 Kg</span></p>
+
+              <div class="plus-minus">
+                <div class="left">
+                  <img
+                    class="minus-icon"
+                    src="/src/assets/svg/Minus.svg"
+                    alt=""
+                  />
+                  <p class="fw-600 mx-4">1</p>
+                  <img
+                    class="plus-icon"
+                    src="/src/assets/svg/Plus.svg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="right">
+                  <p class="green"><span>14</span> Tersisa</p>
+                </div>
+              </div>
+
+              <div class="total">
+                <p>Total Harga :</p>
+                <h1>Rp86.000</h1>
+              </div>
+
+              <div class="button-group">
+                <button class="button-custom light">Beli Langsung</button>
+                <button class="button-custom">+ Keranjang</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review">
+        <h3>Ulasan</h3>
+        <div class="wrapper mt-3">
+          <div class="review-card">
+            <div class="top">
+              <div class="left">
+                <img
+                  src="/src/assets/images/avatar.png"
+                  alt=""
+                  class="avatar"
+                />
+                <div class="text">
+                  <h3 class="fw-500">Salsabila Putri</h3>
+                  <div class="detail">
+                    <p>Varian: 2.5 Kg</p>
+                    <p>13/10/2022, 10:00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="right">
+                <img src="/src/assets/svg/star-sm.svg" alt="" />
+                <p class="fw-600">5.0</p>
+              </div>
+            </div>
+
+            <div class="bottom">
+              <h3 class="fw-400">
+                Repeat order untuk ketiga kalinya. Produk selalu dikirim
+                tepat waktu. Enak, manis. Puas banget
+              </h3>
+
+              <div class="images-review">
+                <div class="video-player">
+                  <div class="play-button-wrapper">
+                    <img
+                      src="/src/assets/svg/play.svg"
+                      alt=""
+                      class="play-button"
+                    />
+                  </div>
+                  <video
+                    id="video-detail"
+                    src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                    controls
+                  ></video>
+                </div>
+                <img src="/src/assets/images/review-1.png" alt="" />
+                <img src="/src/assets/images/review-1.png" alt="" />
+                <img src="/src/assets/images/review-1.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="top">
+              <div class="left">
+                <img
+                  src="/src/assets/images/avatar.png"
+                  alt=""
+                  class="avatar"
+                />
+                <div class="text">
+                  <h3 class="fw-500">Salsabila Putri</h3>
+                  <div class="detail">
+                    <p>Varian: 2.5 Kg</p>
+                    <p>13/10/2022, 10:00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="right">
+                <img src="/src/assets/svg/star-sm.svg" alt="" />
+                <p class="fw-600">5.0</p>
+              </div>
+            </div>
+
+            <div class="bottom">
+              <h3 class="fw-400">
+                Repeat order untuk ketiga kalinya. Produk selalu dikirim
+                tepat waktu. Enak, manis. Puas banget
+              </h3>
+
+              <div class="images-review">
+                <img src="/src/assets/images/review-1.png" alt="" />
+                <img src="/src/assets/images/review-1.png" alt="" />
+                <img src="/src/assets/images/review-1.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="top">
+              <div class="left">
+                <img
+                  src="/src/assets/images/avatar.png"
+                  alt=""
+                  class="avatar"
+                />
+                <div class="text">
+                  <h3 class="fw-500">Salsabila Putri</h3>
+                  <div class="detail">
+                    <p>Varian: 2.5 Kg</p>
+                    <p>13/10/2022, 10:00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="right">
+                <img src="/src/assets/svg/star-sm.svg" alt="" />
+                <p class="fw-600">5.0</p>
+              </div>
+            </div>
+
+            <div class="bottom">
+              <h3 class="fw-400">
+                Repeat order untuk ketiga kalinya. Produk selalu dikirim
+                tepat waktu. Enak, manis. Puas banget
+              </h3>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="top">
+              <div class="left">
+                <img
+                  src="/src/assets/images/avatar.png"
+                  alt=""
+                  class="avatar"
+                />
+                <div class="text">
+                  <h3 class="fw-500">Salsabila Putri</h3>
+                  <div class="detail">
+                    <p>Varian: 2.5 Kg</p>
+                    <p>13/10/2022, 10:00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="right">
+                <img src="/src/assets/svg/star-sm.svg" alt="" />
+                <p class="fw-600">5.0</p>
+              </div>
+            </div>
+
+            <div class="bottom">
+              <h3 class="fw-400">
+                Repeat order untuk ketiga kalinya. Produk selalu dikirim
+                tepat waktu. Enak, manis. Puas banget
+              </h3>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="top">
+              <div class="left">
+                <img
+                  src="/src/assets/images/avatar.png"
+                  alt=""
+                  class="avatar"
+                />
+                <div class="text">
+                  <h3 class="fw-500">Salsabila Putri</h3>
+                  <div class="detail">
+                    <p>Varian: 2.5 Kg</p>
+                    <p>13/10/2022, 10:00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="right">
+                <img src="/src/assets/svg/star-sm.svg" alt="" />
+                <p class="fw-600">5.0</p>
+              </div>
+            </div>
+
+            <div class="bottom">
+              <h3 class="fw-400">
+                Repeat order untuk ketiga kalinya. Produk selalu dikirim
+                tepat waktu. Enak, manis. Puas banget
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <img src="/src/assets/svg/paginate-left.svg" alt="" />
+
+          <div class="number active">1</div>
+          <div class="number">2</div>
+          <div class="number">3</div>
+          <div class="number">4</div>
+
+          <img src="/src/assets/svg/paginate-right.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="top">
+      <div class="item">
+        <a href="">
+          <h3 class="fw-400">Beranda</h3>
+        </a>
+        <a href="">
+          <h3 class="fw-400">Produk</h3>
+        </a>
+        <a href="">
+          <h3 class="fw-400">Lelang</h3>
+        </a>
+        <a href="">
+          <h3 class="fw-400">Bantuan</h3>
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="">
+          <img
+            src="/src/assets/svg/ant-design_youtube-outlined.svg"
+            alt=""
+          />
+          <h3 class="fw-400">ITTelkom Surabaya</h3>
+        </a>
+        <a href="">
+          <img src="/src/assets/svg/fe_instagram.svg" alt="" />
+          <h3 class="fw-400">rfc.ittelkomsby</h3>
+        </a>
+        <a href="">
+          <img src="/src/assets/svg/ri_whatsapp-line.svg" alt="" />
+          <h3 class="fw-400">Admin RFC</h3>
+        </a>
+        <a href="">
+          <img src="/src/assets/svg/pajamas_location.svg" alt="" />
+          <h3 class="fw-400">
+            Jl. Ketintang no.156 Surabaya, 60231Jawa Timur, Indonesia
+          </h3>
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="">
+          <img
+            src="/src/assets/svg/RFC_logo_1-removebg-preview-1.svg"
+            alt=""
+          />
+        </a>
+        <a href="">
+          <img
+            src="/src/assets/svg/RFC_logo_1-removebg-preview-2.svg"
+            alt=""
+          />
+        </a>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <h3>© 2023 Rooftop Farming Center. All rights reserved.</h3>
+    </div>
+  </footer>
+</main>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"> </span>';
+        },
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+
+  <script>
+    // password toggle
+    let eyeIcon = document.querySelectorAll(
+      ".password-input-group .icon-suffix"
+    );
+    let passwordInput = document.querySelectorAll(".password-input-group input");
+
+    for (let i = 0; i < passwordInput.length; i++) {        
+      eyeIcon[i].addEventListener("click", () => {
+        if (passwordInput[i].type == "password") {
+          passwordInput[i].type = "text";
+        } else {
+          passwordInput[i].type = "password";
+        }
+      });
+    }
+
+    // plus minus
+    let minusIcon = document.querySelector(".plus-minus .left .minus-icon");
+    let plusIcon = document.querySelector(".plus-minus .left .plus-icon");
+    let plusMinusValue = document.querySelector(".plus-minus .left p");
+    let restProduct = document.querySelector(".plus-minus .right p span");
+
+    let restProductValue = 14;
+    let counter = 1;
+    plusMinusValue.innerHTML = counter;
+    restProduct.innerHTML = restProductValue;
+
+    function updateCounter() {
+      plusMinusValue.innerHTML = counter;
+      restProduct.innerHTML = restProductValue;
+    }
+
+    minusIcon.addEventListener("click", () => {
+      counter--;
+      restProductValue++;
+      updateCounter();
+    });
+    plusIcon.addEventListener("click", () => {
+      counter++;
+      restProductValue--;
+      updateCounter();
+    });
+
+    // select variant
+    let variantItem = document.querySelectorAll(".variant-item");
+
+    for (const item of variantItem) {
+      item.addEventListener("click", () => {
+        for (const variant of variantItem) {
+          variant.classList.remove("active");
+        }
+
+        item.classList.add("active");
+      });
+    }
+
+    // video player
+    document.addEventListener("DOMContentLoaded", function () {
+      var iconPlay = document.querySelector(".play-button-wrapper");
+      var videoElement = document.getElementById("video-detail");
+      videoElement.controls = false;
+
+      iconPlay.addEventListener("click", function (e) {
+        if (videoElement.paused) {
+          videoElement.play();
+          iconPlay.style.display = "none";
+          videoElement.controls = true;
+        } else {
+          videoElement.pause();
+          iconPlay.style.display = "flex";
+          videoElement.controls = false;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

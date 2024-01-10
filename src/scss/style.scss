@@ -1,0 +1,26 @@
+@import "./base";
+@import "./utils/font";
+@import "./utils/variable";
+
+/*components*/
+@import "./components/navbar";
+@import "./components/footer";
+@import "./components/dropdown";
+@import "./components/button";
+@import "./components/modal";
+@import "./components/input";
+@import "./components/breadcrump";
+@import "./components/text";
+@import "./components/pagination";
+
+/*pages*/
+@import "./pages/list-lelang";
+@import "./pages/beranda";
+@import "./pages/help-pages";
+@import "./pages/cart";
+@import "./pages/detail-lelang";
+@import "./pages/history-transaction-pages";
+@import "./pages/payment-pages";
+@import "./pages/product-reguler";
+@import "./pages/set-order-pages";
+@import "./pages/profile";

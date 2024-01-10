@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/dist/style.css" />
+    <title>Produk </title>
+    <!-- Favicon -->
+    <link rel="icon" href="/src/assets/images/Logo icon.png" type="images/x-icon">
+
+    <!--css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pincode-input@0.1.0/dist/pincode-input.min.css"/>
+    <link rel="stylesheet" href="/dist/style.css">
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+
+</head>
+<body>
+<!-- Modal notification -->
+<div class="modal fade" id="modalNotification" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img data-bs-dismiss="modal" class="close-modal" src="/src/assets/svg/close-modal.svg" alt=""/>
+        <h3 class="text-center">Notifikasi</h3>
+      </div>
+      <div class="modal-body pb-0">
+        <div class="notification-wrapper">
+          <div class="item">
+            <div class="left">
+              <p class="fw-600 mb-1">
+                Anda memenangkan lelang Melon Golden Langkawi!
+              </p>
+              <p>Segera konfirmasi sebelum 23.59 WIB</p>
+            </div>
+            <p>08.00</p>
+          </div>
+          <div class="item">
+            <div class="left">
+              <p class="fw-600">
+                Anda memenangkan lelang Melon Golden Langkawi!
+              </p>
+              <p>Segera konfirmasi sebelum 23.59 WIB</p>
+            </div>
+            <p>08.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <main>
+    <nav class="navbar-custom">
+      <div class="wrapper">
+        <img src="/src/assets/svg/navbar-brand.svg" alt="" />
+
+        <div class="center">
+          <a href="beranda.html">Beranda</a>
+          <a href="produk-reguler.html" class="active">Produk</a>
+          <a href="produk-lelang.html">Lelang</a>
+          <a href="bantuan.html">Bantuan</a>
+        </div>
+
+        <div class="right">
+          <a href="cart.html">
+            <div>
+              <img src="/src/assets/svg/cart3.svg" alt="" />
+            </div>
+          </a>
+
+          <div class="notif-count" data-bs-toggle="modal" data-bs-target="#modalNotification">
+            <img src="/src/assets/svg/bell.svg" alt="" />
+            <div>2</div>
+          </div>
+
+          <a href="/src/html/profil/profil.html">
+            <img src="/src/assets/svg/avatar.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-custom">
+      <!--Carousel Section-->
+      <div class="container">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators bg-transparent">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner" >
+              <div class="carousel-item active">
+                <img src="/src/assets/images/coming soon product.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/src/assets/images/coming soon product.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>           
+    </div>
+      <div class="list-auction-products-pages">
+        
+
+        <!--search-->
+        <div class="top">
+          <div class="input-group">
+            <div class="with-icon">
+              <img
+                class="icon-prefix"
+                src="/src/assets/svg/input-search.svg"
+                alt=""
+              />
+              <input class="input" type="text" placeholder="Cari Produk" />
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button
+              class="button-custom light"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img src="/src/assets/svg/Funnel.svg" alt="" />
+              Semua Status
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Semua Status</a></li>
+              <li><a class="dropdown-item" href="#">Tersedia</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Habis</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--list product-->
+        <div class="card-auction-wrapper">
+          <div  class="list-product">
+            <a href="./detail-produk/reguler-detail.html">
+              <div id="card-produk" style="width: 18rem;">
+                  <div class="card" >
+                  <img src="/src/assets/images/product/Golden melon - 1.png" class="card-img-top" alt="...">
+                  <div class="card-text">
+                          <div class="card-body">
+                            <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                            <h5 >Rp68.000 - Rp92.000</h5>
+                          </div>    
+                          <div class="wrapper" >
+                              <div class="mini-wrapper">
+                                  <img src="/src/assets/svg/star-sm.svg" alt="">
+                                  <p>4.5</p>
+                              </div>
+                              <p>124 Terjual</p>
+                          </div>                           
+                      
+                      </div>
+                  </div>
+              </div>
+            </a> 
+            <a href="./detail-produk/reguler-detail.html">
+              <div id="card-produk" style="width: 18rem;">
+                  <div class="card" >
+                  <img src="/src/assets/images/product/Golden melon - 1.png" class="card-img-top" alt="...">
+                  <div class="card-text">
+                          <div class="card-body">
+                            <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                            <h5 >Rp68.000 - Rp92.000</h5>
+                          </div>    
+                          <div class="wrapper" >
+                              <div class="mini-wrapper">
+                                  <img src="/src/assets/svg/star-sm.svg" alt="">
+                                  <p>4.5</p>
+                              </div>
+                              <p>124 Terjual</p>
+                          </div>                           
+                      
+                      </div>
+                  </div>
+              </div>
+            </a> 
+            <a href="./detail-produk/reguler-detail.html">
+              <div id="card-produk" style="width: 18rem;">
+                  <div class="card" >
+                  <img src="/src/assets/images/product/Golden melon - 1.png" class="card-img-top" alt="...">
+                  <div class="card-text">
+                          <div class="card-body">
+                            <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                            <h5 >Rp68.000 - Rp92.000</h5>
+                          </div>    
+                          <div class="wrapper" >
+                              <div class="mini-wrapper">
+                                  <img src="/src/assets/svg/star-sm.svg" alt="">
+                                  <p>4.5</p>
+                              </div>
+                              <p>124 Terjual</p>
+                          </div>                           
+                      
+                      </div>
+                  </div>
+              </div>
+            </a> 
+            <a href="./detail-produk/reguler-detail.html">
+              <div id="card-produk" style="width: 18rem;">
+                  <div class="card" >
+                  <img src="/src/assets/images/product/Golden melon - 1.png" class="card-img-top" alt="...">
+                  <div class="card-text">
+                          <div class="card-body">
+                            <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                            <h5 >Rp68.000 - Rp92.000</h5>
+                          </div>    
+                          <div class="wrapper" >
+                              <div class="mini-wrapper">
+                                  <img src="/src/assets/svg/star-sm.svg" alt="">
+                                  <p>4.5</p>
+                              </div>
+                              <p>124 Terjual</p>
+                          </div>                           
+                      
+                      </div>
+                  </div>
+              </div>
+            </a> 
+            <a href="./detail-produk/reguler-detail.html">
+              <div id="card-produk" style="width: 18rem;">
+                  <div class="card" >
+                  <img src="/src/assets/images/product/Golden melon - 1.png" class="card-img-top" alt="...">
+                  <div class="card-text">
+                          <div class="card-body">
+                            <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                            <h5 >Rp68.000 - Rp92.000</h5>
+                          </div>    
+                          <div class="wrapper" >
+                              <div class="mini-wrapper">
+                                  <img src="/src/assets/svg/star-sm.svg" alt="">
+                                  <p>4.5</p>
+                              </div>
+                              <p>124 Terjual</p>
+                          </div>                           
+                      
+                      </div>
+                  </div>
+              </div>
+            </a> 
+            <a href="./detail-produk/reguler-detail.html">
+              <div id="card-produk" style="width: 18rem;">
+                  <div class="card" >
+                  <img src="/src/assets/images/product/Golden melon - 1.png" class="card-img-top" alt="...">
+                  <div class="card-text">
+                          <div class="card-body">
+                            <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                            <h5 >Rp68.000 - Rp92.000</h5>
+                          </div>    
+                          <div class="wrapper" >
+                              <div class="mini-wrapper">
+                                  <img src="/src/assets/svg/star-sm.svg" alt="">
+                                  <p>4.5</p>
+                              </div>
+                              <p>124 Terjual</p>
+                          </div>                           
+                      
+                      </div>
+                  </div>
+              </div>
+            </a> 
+            <a href="./detail-produk/reguler-detail.html">
+              <div id="card-produk" style="width: 18rem;">
+                  <div class="card" >
+                  <img src="/src/assets/images/product/Golden melon - 1.png" class="card-img-top" alt="...">
+                  <div class="card-text">
+                          <div class="card-body">
+                            <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                            <h5 >Rp68.000 - Rp92.000</h5>
+                          </div>    
+                          <div class="wrapper" >
+                              <div class="mini-wrapper">
+                                  <img src="/src/assets/svg/star-sm.svg" alt="">
+                                  <p>4.5</p>
+                              </div>
+                              <p>124 Terjual</p>
+                          </div>                           
+                      
+                      </div>
+                  </div>
+              </div>
+            </a> 
+            <a href="./detail-produk/reguler-detail.html">
+              <div id="card-produk" style="width: 18rem;">
+                  <div class="card" >
+                  <img src="/src/assets/images/product/Golden melon - 1.png" class="card-img-top" alt="...">
+                  <div class="card-text">
+                          <div class="card-body">
+                            <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                            <h5 >Rp68.000 - Rp92.000</h5>
+                          </div>    
+                          <div class="wrapper" >
+                              <div class="mini-wrapper">
+                                  <img src="/src/assets/svg/star-sm.svg" alt="">
+                                  <p>4.5</p>
+                              </div>
+                              <p>124 Terjual</p>
+                          </div>                           
+                      
+                      </div>
+                  </div>
+              </div>
+            </a> 
+            <a href="./detail-produk/reguler-detail.html">
+              <div id="card-produk" style="width: 18rem;">
+                  <div class="card" >
+                  <img src="/src/assets/images/product/Golden melon - 1.png" class="card-img-top" alt="...">
+                  <div class="card-text">
+                          <div class="card-body">
+                            <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                            <h5 >Rp68.000 - Rp92.000</h5>
+                          </div>    
+                          <div class="wrapper" >
+                              <div class="mini-wrapper">
+                                  <img src="/src/assets/svg/star-sm.svg" alt="">
+                                  <p>4.5</p>
+                              </div>
+                              <p>124 Terjual</p>
+                          </div>                           
+                      
+                      </div>
+                  </div>
+              </div>
+            </a> 
+            <a href="./detail-produk/reguler-detail.html">
+              <div id="card-produk" style="width: 18rem;">
+                  <div class="card" >
+                  <img src="/src/assets/images/product/Golden melon - 1.png" class="card-img-top" alt="...">
+                  <div class="card-text">
+                          <div class="card-body">
+                            <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                            <h5 >Rp68.000 - Rp92.000</h5>
+                          </div>    
+                          <div class="wrapper" >
+                              <div class="mini-wrapper">
+                                  <img src="/src/assets/svg/star-sm.svg" alt="">
+                                  <p>4.5</p>
+                              </div>
+                              <p>124 Terjual</p>
+                          </div>                           
+                      
+                      </div>
+                  </div>
+              </div>
+            </a> 
+            <a href="./detail-produk/reguler-detail.html">
+              <div id="card-produk" style="width: 18rem;">
+                <div class="card" >
+                  <img src="/src/assets/images/product/Golden melon - 1.png" class="card-img-top" alt="...">
+                  <div class="card-text">
+                          <div class="card-body">
+                            <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                            <h5 >Rp68.000 - Rp92.000</h5>
+                          </div>    
+                          <div class="wrapper" >
+                              <div class="mini-wrapper">
+                                  <img src="/src/assets/svg/star-sm.svg" alt="">
+                                  <p>4.5</p>
+                              </div>
+                              <p>124 Terjual</p>
+                          </div>                           
+                      
+                      </div>
+                </div>
+              </div>
+            </a> 
+            <a href="./detail-produk/reguler-detail.html">
+              <div id="card-produk none" style="width: 18rem;">
+                <div class="card" >
+                  <img src="/src/assets/images/product/Golden melon - 1.png" class="card-img-top" alt="...">
+                  <div class="card-text">
+                          <div class="card-body">
+                            <p >Golden Melon Big Size 2 - 2.5 Kg</p>
+                            <h5 >Rp68.000 - Rp92.000</h5>
+                          </div>    
+                          <div class="wrapper" >
+                              <div class="mini-wrapper">
+                                  <img src="/src/assets/svg/star-sm.svg" alt="">
+                                  <p>4.5</p>
+                              </div>
+                              <p>124 Terjual</p>
+                          </div>                           
+                      
+                      </div>
+                </div>
+              </div>
+            </a> 
+          </div>
+          
+        </div>
+      </div>
+      <!--pagination-->
+      <div class="pagination mt-3">
+        <img src="/src/assets/svg/paginate-left.svg" alt="" />
+
+        <div class="number active">1</div>
+        <div class="number">2</div>
+        <div class="number">3</div>
+        <div class="number">4</div>
+
+        <img src="/src/assets/svg/paginate-right.svg" alt="" />
+      </div>
+    </div>
+    
+    <!--FOOTER-->
+    <footer class="footer">
+      <div class="top">
+        <div class="item">
+          <a href="/src/html/beranda.html">
+            <h3 class="fw-400">Beranda</h3>
+          </a>
+          <a href="/src/html/produk-reguler.html">
+            <h3 class="fw-400">Produk</h3>
+          </a>
+          <a href="/src/html/produk-lelang.html">
+            <h3 class="fw-400">Lelang</h3>
+          </a>
+          <a href="/src/html/bantuan.html">
+            <h3 class="fw-400">Bantuan</h3>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="https://youtu.be/Lk870ZBfTQk?si=ppSMDgsuJy2iLTx-">
+            <img src="/src/assets/svg/ant-design_youtube-outlined.svg" alt=""/>
+            <h3 class="fw-400">ITTelkom Surabaya</h3>
+          </a>
+          <a href="https://www.instagram.com/rfc.ittelkomsby/?hl=en">
+            <img src="/src/assets/svg/fe_instagram.svg" alt="" />
+            <h3 class="fw-400">rfc.ittelkomsby</h3>
+          </a>
+          <a href="https://wa.me/6282312206635">
+            <img src="/src/assets/svg/ri_whatsapp-line.svg" alt="" />
+            <h3 class="fw-400">Admin RFC</h3>
+          </a>
+          <a href="https://maps.app.goo.gl/bdZyWKLKxjD6meKY8">
+            <img src="/src/assets/svg/pajamas_location.svg" alt="" />
+            <h3 class="fw-400">Jl. Ketintang no.156 Surabaya, 60231 Jawa Timur, Indonesia</h3>
+          </a>
+        </div>
+
+        <div class="item">
+          <a href="">
+            <img src="/src/assets/svg/RFC_logo_1-removebg-preview-1.svg" alt=""/>
+          </a>
+          <a href="">
+            <img src="/src/assets/svg/RFC_logo_1-removebg-preview-2.svg" alt=""/>
+          </a>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <h3>© 2023 Rooftop Farming Center. All rights reserved.</h3>
+      </div>
+    </footer>
+  </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
