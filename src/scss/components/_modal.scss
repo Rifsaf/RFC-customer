@@ -114,6 +114,21 @@
       }
     }
 
+    .image-card{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      image{
+ 
+        .edit{
+          position: absolute;
+          top:50%;
+          left: 50%;
+        }
+      }
+    }
+
     .address {
       &:hover {
         .wrapper {
