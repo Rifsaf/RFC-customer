@@ -332,6 +332,17 @@ footer .item:nth-child(2) {
   transform: translate(-50%, -50%);
   background-color: white;
 }
+.modal .modal-body .image-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.modal .modal-body .image-card image .edit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
 .modal .modal-body .address:hover .wrapper {
   background-color: #dddfe8;
 }
