@@ -750,6 +750,10 @@ nav .action {
   align-items: center;
   gap: 8px;
   align-self: stretch; }
+  .tittle h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 .wrapper {
   display: flex;
